@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: mysql-headless
 spec:
-  clusterIp: None
+  clusterIP: None
   selector: 
     project: expense
     module: mysql
@@ -38,7 +38,7 @@ spec:
         project: expense
         module: mysql
         environment: dev
-  serviceName: "nginx"
+  serviceName: "mysql-headless"
   replicas: 2 
   template:
     metadata:
